@@ -1,2 +1,2 @@
 # whatbot
- A bot to automate whatsapp message delivery on csv file
+ A bot to automate WhatsApp message delivery on CSV file
