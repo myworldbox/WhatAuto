@@ -17,22 +17,24 @@ count = 0
 
 for person, info in zipper:
 
-    time.sleep(4)
+    if count % 10 == 0:
+        os.system("killall -9 'Google Chrome'")
+        webbrowser.open(
+            'https://web.whatsapp.com')
+        time.sleep(12)
+
     webbrowser.open(
         'https://web.whatsapp.com/send?phone=852_' + str(person) + '&text=' + urllib.parse.quote(
             '成員: ' + str(count) + '\n\n' + info))
     count += 1
 
-    if first:
-        time.sleep(6)
+    if (first):
+        time.sleep(10)
         first = False
 
     width, height = pyautogui.size()
     pyautogui.click(width / 2, height / 2)
 
-    time.sleep(9)
+    time.sleep(10)
     pyautogui.press('enter')
-    time.sleep(9)
-
-    if count % 5 == 0:
-        os.system("killall -9 'Google Chrome'")
+    time.sleep(10)
