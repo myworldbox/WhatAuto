@@ -8,7 +8,7 @@ import os
 data = pandas.read_csv('auto - Sheet1.csv')
 book = data.to_dict('list')
 
-receiver = book['電話號碼']
+receiver = book['電話號碼 - Phone number']
 message = book['message']
 
 zipper = zip(receiver, message)
