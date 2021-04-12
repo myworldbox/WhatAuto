@@ -5,17 +5,12 @@ import pandas
 import time
 import os
 
-data = pandas.read_csv('auto - Sheet1.csv')
-book = data.to_dict('list')
-
-receiver = book['電話號碼 - Phone number']
-message = book['message']
-
-zipper = zip(receiver, message)
 first = True
 count = 0
 
-for person, info in zipper:
+list = pandas.read_csv('WhatAuto - Sheet1.csv').to_dict('list')
+
+for number, body in zip(list['number'], list['body']):
 
     if count % 10 == 0:
         os.system("killall -9 'Google Chrome'")
@@ -23,9 +18,7 @@ for person, info in zipper:
             'https://web.whatsapp.com')
         time.sleep(12)
 
-    webbrowser.open(
-        'https://web.whatsapp.com/send?phone=852_' + str(person) + '&text=' + urllib.parse.quote(
-            '成員: ' + str(count) + '\n\n' + info))
+    webbrowser.open('https://web.whatsapp.com/send?phone=852_' + str(number) + '&text=' + urllib.parse.quote(body))
     count += 1
 
     if (first):
