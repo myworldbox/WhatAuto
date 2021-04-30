@@ -1,5 +1,5 @@
-// Copyright© 2020. VL Some rights reserved.
-// https://myworldbox.github.io/
+# Copyright© 2020. VL Some rights reserved.
+# https://myworldbox.github.io/
 
 import urllib.parse
 import pyautogui
