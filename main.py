@@ -2,8 +2,8 @@
 # https://myworldbox.github.io/
 
 import urllib.parse
-import pyautogui
 import webbrowser
+import pyautogui
 import pandas
 import time
 import os
